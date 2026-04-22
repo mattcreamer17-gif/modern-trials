@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A read on where AI fits in Modern Trials' stack. Prepared for Modern Trials.</title>
+<meta name="description" content="Saw the ARPA-H Health Innovation Network listing and the InterSystems integration announcement. A hunch the throughput wall is not the AI, it is the FHIR work." />
+<meta name="robots" content="noindex,nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo-wrap">
+      <img src="logo.png" alt="Modern Trials" class="logo-img" />
+    </div>
+    <div class="nav-note">Prepared for Modern Trials · eMerge Americas · Booth SS37</div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <span class="hero-eyebrow">
+      <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+      A brief from Eduba for Modern Trials
+    </span>
+    <h1>A read on where AI fits in Modern Trials' stack: <span class="soft">and where it does not.</span></h1>
+    <p class="hero-sub">A short orchestration brief on the throughput wall sitting between the Trial Recruitment Toolbox and the next ten sponsor deals.</p>
+    <div class="hero-meta" aria-label="Context signals">
+      <span>ARPA-H Health Innovation Network</span>
+      <span>InterSystems collaboration</span>
+      <span>Advisory bench led by Blackford Middleton</span>
+    </div>
+  </div>
+</section>
+
+<div class="trust-band" aria-label="Regulatory posture echoed from Modern Trials">
+  <div class="container">
+    <div class="trust-inner">
+      <span class="trust-label">Compliance register</span>
+      <span class="trust-band-item">FDA</span>
+      <span class="trust-band-item">HIPAA</span>
+      <span class="trust-band-item">FHIR</span>
+      <span class="trust-band-item">ICH-GCP</span>
+      <span class="trust-band-item">HCISPP</span>
+    </div>
+  </div>
+</div>
+
+<section>
+  <div class="container">
+    <span class="section-label">The read</span>
+    <h2>Modern Trials is past proof-of-concept. The next wall is throughput.</h2>
+    <div class="body-prose">
+      <p>The ARPA-H Health Innovation Network listing, the InterSystems collaboration, and Blackford Middleton on the advisory bench say the same thing. Modern Trials is past proof-of-concept. The next wall is throughput.</p>
+      <p>Every new hospital drags a FHIR integration behind it. Every new sponsor asks questions about AI extraction accuracy that a procurement team will not take "trust us" for an answer on. A ten-person company cannot carry both.</p>
+    </div>
+
+    <div class="tiles" aria-label="Where the wall shows up">
+      <article class="tile">
+        <span class="tile-num">01</span>
+        <h3>Integration throughput ceiling</h3>
+        <p>Every new health system and every new sponsor protocol triggers a bespoke FHIR and EHR extraction effort. That work caps revenue before the sales team even runs out of pipeline.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-num">02</span>
+        <h3>AI claim exposure with sponsors</h3>
+        <p>Pharma and CRO procurement teams will want auditable evidence that AI-driven extraction is not over-counting eligible patients. Without a governance layer, a technical review stalls the deal.</p>
+      </article>
+      <article class="tile">
+        <span class="tile-num">03</span>
+        <h3>Two-buyer GTM tax</h3>
+        <p>Provider orgs and sponsors are different buying motions, different price points, different success metrics. Pulling in both directions slows close rates on either side.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="container">
+    <span class="section-label">The Eduba frame</span>
+    <h2>A 60/30/10 split on most healthtech stacks.</h2>
+    <div class="body-prose">
+      <p>Sixty percent of what feels like AI work is traditional code and schema work, done once and reused. Thirty percent is rule-based logic that sits above the code. Only the final ten percent is a genuine model decision, where the cost of a wrong call earns the LLM tax.</p>
+      <p>For Modern Trials, the integration playbook (EMR parsing, FHIR mapping, consent workflow, site onboarding) is code and rules. Eligibility screening against a trial protocol is where real AI earns its place. The question is whether the current stack separates those layers, or whether model calls are quietly carrying logic that Postgres would do faster, cheaper, and with a cleaner audit trail.</p>
+    </div>
+
+    <div class="frame-card">
+      <span class="section-label">Computational orchestration</span>
+      <h3>Deciding which layer each piece of the problem belongs on.</h3>
+      <div class="frame-grid">
+        <div class="frame-slice">
+          <div class="pct">60%</div>
+          <div class="layer">Traditional code</div>
+          <div class="note">EMR parsing, FHIR mapping, consent workflow, site onboarding, scheduling. Done once. Reused every deployment.</div>
+        </div>
+        <div class="frame-slice">
+          <div class="pct">30%</div>
+          <div class="layer">Rule-based logic</div>
+          <div class="note">Protocol decision trees, outreach cadences, document routing, audit trail policies. Postgres and state machines, not LLMs.</div>
+        </div>
+        <div class="frame-slice">
+          <div class="pct">10%</div>
+          <div class="layer">Genuine model work</div>
+          <div class="note">Eligibility screening across messy free-text notes. The place where a wrong answer earns the cost of a model call.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="section-label">Why this maps</span>
+    <h2>The closest engagement on our shelf is Feeld.</h2>
+    <div class="proof">
+      <article class="proof-card">
+        <span class="tag">Matching case</span>
+        <h3>Feeld: scoped sprint with Andrew Santus, CTO</h3>
+        <p>A product company with a technical CEO and CTO, a coherent narrow product, and a need to operationalize AI inside an existing small team. Deliverables: a workshop, a short sequence of advisory calls, an Organizational Context Architecture, and a Strategic Operations Framework. The output was a single architecture the CTO could actually run against, rather than a pile of ideas. Same shape of team. Same readiness to skip the deck and build the thing.</p>
+      </article>
+      <article class="proof-card">
+        <span class="tag">Governance scaffold</span>
+        <h3>Ethics Engine</h3>
+        <p>A psychometric assessment tool for evaluating ideological and moral patterns in LLMs. It is the governance scaffold sponsor procurement teams want when they ask how the AI extraction is validated. Paper: <a href="https://arxiv.org/abs/2510.11742" target="_blank" rel="noopener">arxiv.org/abs/2510.11742</a>. Repo: <a href="https://github.com/RinDig/AuditEngine" target="_blank" rel="noopener">github.com/RinDig/AuditEngine</a>.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" id="call">
+  <div class="container">
+    <span class="section-label" style="color: rgba(255,255,255,0.7);">The next step</span>
+    <h2>30 minutes with Matt. Calendar link below.</h2>
+    <p class="lede">Bring one live integration or one sponsor technical review that is eating calendar time. We will do a live orchestration audit and leave you with a page of next steps. Matt is at booth SS37 at eMerge Americas in the meantime.</p>
+    <div class="cta-row">
+      <a class="cta-btn" href="https://calendly.com/thecro-eduba/30min" target="_blank" rel="noopener">Book 30 minutes with Matt</a>
+      <span class="cta-host"><strong>Matt Creamer</strong> · CRO, Eduba</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <span>Prepared by Eduba · <a href="https://eduba.io" target="_blank" rel="noopener">eduba.io</a></span>
+      <span>Eduba partners with NLP Logix for work that sits below the orchestration layer. NLP Logix has been in machine learning since 2011 and runs over 150 data scientists.</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
